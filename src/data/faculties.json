@@ -1,0 +1,72 @@
+[
+  {
+    "code": "A",
+    "name": "Fakultas Ilmu Pendidikan",
+    "abbr": "FIP"
+  },
+  {
+    "code": "B",
+    "name": "Fakultas Pendidikan Ilmu Pengetahuan Sosial",
+    "abbr": "FPIPS"
+  },
+  {
+    "code": "C",
+    "name": "Fakultas Pendidikan Bahasa dan Sastra",
+    "abbr": "FPBS"
+  },
+  {
+    "code": "D",
+    "name": "Fakultas Pendidikan Matematika dan Ilmu Pengetahuan Alam",
+    "abbr": "FPMIPA"
+  },
+  {
+    "code": "E",
+    "name": "Fakultas Pendidikan Teknologi dan Kejuruan",
+    "abbr": "FPTK"
+  },
+  {
+    "code": "F",
+    "name": "Fakultas Pendidikan Olahraga dan Kesehatan",
+    "abbr": "FPOK"
+  },
+  {
+    "code": "G",
+    "name": "Kampus UPI Cibiru",
+    "abbr": "Kamda Cibiru"
+  },
+  {
+    "code": "H",
+    "name": "Kampus UPI Sumedang",
+    "abbr": "Kamda Sumedang"
+  },
+  {
+    "code": "I",
+    "name": "Kampus UPI Purwakarta",
+    "abbr": "Kamda Purwakarta"
+  },
+  {
+    "code": "J",
+    "name": "Kampus UPI Tasikmalaya",
+    "abbr": "Kamda Tasikmalaya"
+  },
+  {
+    "code": "K",
+    "name": "Kampus UPI Serang",
+    "abbr": "Kamda Serang"
+  },
+  {
+    "code": "L",
+    "name": "Fakultas Pendidikan Ekonomi dan Bisnis",
+    "abbr": "FPEB"
+  },
+  {
+    "code": "M",
+    "name": "Fakultas Pendidikan Seni dan Desain",
+    "abbr": "FPSD"
+  },
+  {
+    "code": "N",
+    "name": "Sekolah Pascasarjana",
+    "abbr": "SPs"
+  }
+]

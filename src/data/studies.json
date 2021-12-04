@@ -1,0 +1,707 @@
+[
+  {
+    "code": "A015",
+    "name": "Administrasi Pendidikan",
+    "faculty": "A"
+  },
+  {
+    "code": "A025",
+    "name": "Bimbingan dan Konseling",
+    "faculty": "A"
+  },
+  {
+    "code": "A035",
+    "name": "Pendidikan Masyarakat",
+    "faculty": "A"
+  },
+  {
+    "code": "A045",
+    "name": "Pendidikan Khusus",
+    "faculty": "A"
+  },
+  {
+    "code": "A055",
+    "name": "Teknologi Pendidikan",
+    "faculty": "A"
+  },
+  {
+    "code": "A065",
+    "name": "Pendidikan Guru Sekolah Dasar",
+    "faculty": "A"
+  },
+  {
+    "code": "A075",
+    "name": "Pendidikan Guru Pendidikan Anak Usia Dini",
+    "faculty": "A"
+  },
+  {
+    "code": "A085",
+    "name": "Perpustakaan dan Sains Informasi",
+    "faculty": "A"
+  },
+  {
+    "code": "A505",
+    "name": "Psikologi",
+    "faculty": "A"
+  },
+  {
+    "code": "B015",
+    "name": "Pendidikan Kewarganegaraan",
+    "faculty": "B"
+  },
+  {
+    "code": "B025",
+    "name": "Pendidikan Sejarah",
+    "faculty": "B"
+  },
+  {
+    "code": "B035",
+    "name": "Pendidikan Geografi",
+    "faculty": "B"
+  },
+  {
+    "code": "B085",
+    "name": "Ilmu Pendidikan Agama Islam",
+    "faculty": "B"
+  },
+  {
+    "code": "B095",
+    "name": "Pendidikan Ilmu Pengetahuan Sosial",
+    "faculty": "B"
+  },
+  {
+    "code": "B105",
+    "name": "Pendidikan Sosiologi",
+    "faculty": "B"
+  },
+  {
+    "code": "B115",
+    "name": "Pendidikan Parawisata",
+    "faculty": "B"
+  },
+  {
+    "code": "B525",
+    "name": "Manajemen Resort dan Leisure",
+    "faculty": "B"
+  },
+  {
+    "code": "B535",
+    "name": "Manajemen Pemasaran Parawisata",
+    "faculty": "B"
+  },
+  {
+    "code": "B545",
+    "name": "Manajemen Industri Katering",
+    "faculty": "B"
+  },
+  {
+    "code": "B555",
+    "name": "Sains Informasi Geografis",
+    "faculty": "B"
+  },
+  {
+    "code": "B565",
+    "name": "Ilmu Komunikasi",
+    "faculty": "B"
+  },
+  {
+    "code": "C015",
+    "name": "Pendidikan Bahasa dan Sastra Indonesia",
+    "faculty": "C"
+  },
+  {
+    "code": "C025",
+    "name": "Pendidikan Bahasa Sunda",
+    "faculty": "C"
+  },
+  {
+    "code": "C035",
+    "name": "Pendidikan Bahasa Inggris",
+    "faculty": "C"
+  },
+  {
+    "code": "C045",
+    "name": "Pendidikan Bahasa Arab",
+    "faculty": "C"
+  },
+  {
+    "code": "C055",
+    "name": "Pendidikan Bahasa Jepang",
+    "faculty": "C"
+  },
+  {
+    "code": "C065",
+    "name": "Pendidikan Bahasa Jerman",
+    "faculty": "C"
+  },
+  {
+    "code": "C075",
+    "name": "Pendidikan Bahasa Perancis",
+    "faculty": "C"
+  },
+  {
+    "code": "C115",
+    "name": "Pendidikan Bahasa Korea",
+    "faculty": "C"
+  },
+  {
+    "code": "C505",
+    "name": "Bahasa dan Sastra Inggris",
+    "faculty": "C"
+  },
+  {
+    "code": "C515",
+    "name": "Bahasa dan Sastra Indonesia",
+    "faculty": "C"
+  },
+  {
+    "code": "D015",
+    "name": "Pendidikan Matematika",
+    "faculty": "D"
+  },
+  {
+    "code": "D025",
+    "name": "Pendidikan Fisika",
+    "faculty": "D"
+  },
+  {
+    "code": "D035",
+    "name": "Pendidikan Biologi",
+    "faculty": "D"
+  },
+  {
+    "code": "D045",
+    "name": "Pendidikan Kimia",
+    "faculty": "D"
+  },
+  {
+    "code": "D055",
+    "name": "Pendidikan Ilmu Komputer",
+    "faculty": "D"
+  },
+  {
+    "code": "D405",
+    "name": "Pendidikan IPA Internasional (IPSE)",
+    "faculty": "D"
+  },
+  {
+    "code": "D505",
+    "name": "Matematika",
+    "faculty": "D"
+  },
+  {
+    "code": "D515",
+    "name": "Fisika",
+    "faculty": "D"
+  },
+  {
+    "code": "D525",
+    "name": "Biologi",
+    "faculty": "D"
+  },
+  {
+    "code": "D535",
+    "name": "Kimia",
+    "faculty": "D"
+  },
+  {
+    "code": "D545",
+    "name": "Ilmu Komputer",
+    "faculty": "D"
+  },
+  {
+    "code": "E015",
+    "name": "Pendidikan Teknik Arsitektur",
+    "faculty": "E"
+  },
+  {
+    "code": "E025",
+    "name": "Pendidikan Teknik Bangunan",
+    "faculty": "E"
+  },
+  {
+    "code": "E045",
+    "name": "Pendidikan Teknik Elektro",
+    "faculty": "E"
+  },
+  {
+    "code": "E055",
+    "name": "Pendidikan Teknik Mesin",
+    "faculty": "E"
+  },
+  {
+    "code": "E065",
+    "name": "Pendidikan Kesejahteraan Keluarga",
+    "faculty": "E"
+  },
+  {
+    "code": "E075",
+    "name": "Pendidikan Tata Boga",
+    "faculty": "E"
+  },
+  {
+    "code": "E085",
+    "name": "Pendidikan Tata Busana",
+    "faculty": "E"
+  },
+  {
+    "code": "E095",
+    "name": "Pendidikan Teknologi Agroindustri",
+    "faculty": "E"
+  },
+  {
+    "code": "E105",
+    "name": "Pendidikan Teknik Otomatif",
+    "faculty": "E"
+  },
+  {
+    "code": "E115",
+    "name": "Pendidikan Teknik Otomasi Industri dan Robotika",
+    "faculty": "E"
+  },
+  {
+    "code": "E505",
+    "name": "Teknik Elektro",
+    "faculty": "E"
+  },
+  {
+    "code": "E515",
+    "name": "Arsitektur",
+    "faculty": "E"
+  },
+  {
+    "code": "E545",
+    "name": "Teknik Sipil",
+    "faculty": "E"
+  },
+  {
+    "code": "E555",
+    "name": "Teknik Logistik",
+    "faculty": "E"
+  },
+  {
+    "code": "F015",
+    "name": "Pendidikan Kepelatihan Olahraga",
+    "faculty": "F"
+  },
+  {
+    "code": "F025",
+    "name": "Pendidikan Jasmani Kesehatan dan Rekreasi",
+    "faculty": "F"
+  },
+  {
+    "code": "F085",
+    "name": "Pendidikan Guru Sekolah Dasar Pendidikan Jasmani",
+    "faculty": "F"
+  },
+  {
+    "code": "F505",
+    "name": "Ilmu Keolahragaan",
+    "faculty": "F"
+  },
+  {
+    "code": "F525",
+    "name": "Pelatihan Fisik Olahraga",
+    "faculty": "F"
+  },
+  {
+    "code": "F535",
+    "name": "Gizi",
+    "faculty": "F"
+  },
+  {
+    "code": "G065",
+    "name": "Pendidikan Guru Sekolah Dasar",
+    "faculty": "G"
+  },
+  {
+    "code": "G075",
+    "name": "Pendidikan Guru Pendidikan Anak Usia Dini",
+    "faculty": "G"
+  },
+  {
+    "code": "G095",
+    "name": "Pendidikan Multimedia",
+    "faculty": "G"
+  },
+  {
+    "code": "G505",
+    "name": "Rekayasa Perangkat Lunak",
+    "faculty": "G"
+  },
+  {
+    "code": "G515",
+    "name": "Teknik Komputer",
+    "faculty": "G"
+  },
+  {
+    "code": "H065",
+    "name": "Pendidikan Guru Sekolah Dasar",
+    "faculty": "H"
+  },
+  {
+    "code": "H085",
+    "name": "Pendidikan Guru Sekolah Dasar Pendidikan Jasmani",
+    "faculty": "H"
+  },
+  {
+    "code": "H515",
+    "name": "Keperawatan",
+    "faculty": "H"
+  },
+  {
+    "code": "H525",
+    "name": "Industri Pariwisata",
+    "faculty": "H"
+  },
+  {
+    "code": "I065",
+    "name": "Pendidikan Guru Sekolah Dasar",
+    "faculty": "I"
+  },
+  {
+    "code": "I075",
+    "name": "Pendidikan Guru Pendidikan Anak Usia Dini",
+    "faculty": "I"
+  },
+  {
+    "code": "I095",
+    "name": "Pendidikan Sistem dan Teknologi Informasi",
+    "faculty": "I"
+  },
+  {
+    "code": "I505",
+    "name": "Sistem Telekomunikasi",
+    "faculty": "I"
+  },
+  {
+    "code": "I515",
+    "name": "Mekatronika dan Kecerdasan Buatan",
+    "faculty": "I"
+  },
+  {
+    "code": "J065",
+    "name": "Pendidikan Guru Sekolah Dasar",
+    "faculty": "J"
+  },
+  {
+    "code": "J075",
+    "name": "Pendidikan Guru Pendidikan Anak Usia Dini",
+    "faculty": "J"
+  },
+  {
+    "code": "J505",
+    "name": "Kewirausahaan",
+    "faculty": "J"
+  },
+  {
+    "code": "J515",
+    "name": "Bisnis Digital",
+    "faculty": "J"
+  },
+  {
+    "code": "J525",
+    "name": "Desain Produk Industri",
+    "faculty": "J"
+  },
+  {
+    "code": "K065",
+    "name": "Pendidikan Guru Sekolah Dasar",
+    "faculty": "K"
+  },
+  {
+    "code": "K075",
+    "name": "Pendidikan Guru Pendidikan Anak Usia Dini",
+    "faculty": "K"
+  },
+  {
+    "code": "K095",
+    "name": "Pendidikan Kelautan dan Perikanan",
+    "faculty": "K"
+  },
+  {
+    "code": "K505",
+    "name": "Sistem Informasi Kelautan",
+    "faculty": "K"
+  },
+  {
+    "code": "K515",
+    "name": "Logistik Kelautan",
+    "faculty": "K"
+  },
+  {
+    "code": "L015",
+    "name": "Pendidikan Akuntansi",
+    "faculty": "L"
+  },
+  {
+    "code": "L025",
+    "name": "Pendidikan Bisnis",
+    "faculty": "L"
+  },
+  {
+    "code": "L035",
+    "name": "Pendidikan Manajemen Perkantoran",
+    "faculty": "L"
+  },
+  {
+    "code": "L045",
+    "name": "Pendidikan Ekonomi",
+    "faculty": "L"
+  },
+  {
+    "code": "L505",
+    "name": "Manajemen",
+    "faculty": "L"
+  },
+  {
+    "code": "L515",
+    "name": "Akuntansi",
+    "faculty": "L"
+  },
+  {
+    "code": "L525",
+    "name": "Ilmu Ekonomi dan Keuangan Islam",
+    "faculty": "L"
+  },
+  {
+    "code": "M015",
+    "name": "Pendidikan Seni Rupa",
+    "faculty": "M"
+  },
+  {
+    "code": "M025",
+    "name": "Pendidikan Seni Tari",
+    "faculty": "M"
+  },
+  {
+    "code": "M035",
+    "name": "Pendidikan Seni Musik",
+    "faculty": "M"
+  },
+  {
+    "code": "M505",
+    "name": "Desain Komunikasi Visual",
+    "faculty": "M"
+  },
+  {
+    "code": "M515",
+    "name": "Film dan Televisi",
+    "faculty": "M"
+  },
+  {
+    "code": "M525",
+    "name": "Musik",
+    "faculty": "M"
+  },
+  {
+    "code": "N001",
+    "name": "Magister Pendidikan Ilmu Komputer",
+    "faculty": "N"
+  },
+  {
+    "code": "N002",
+    "name": "Magister Manajemen Perkantoran",
+    "faculty": "N"
+  },
+  {
+    "code": "N003",
+    "name": "Magister Pariwisata",
+    "faculty": "N"
+  },
+  {
+    "code": "N004",
+    "name": "Magister Akuntansi",
+    "faculty": "N"
+  },
+  {
+    "code": "N005",
+    "name": "Magister Pendidikan Ilmu Pengetahuan Sosial",
+    "faculty": "N"
+  },
+  {
+    "code": "N006",
+    "name": "Magister Linguistik",
+    "faculty": "N"
+  },
+  {
+    "code": "N007",
+    "name": "Magister Manajemen",
+    "faculty": "N"
+  },
+  {
+    "code": "N008",
+    "name": "Magister Pendidikan Sejarah",
+    "faculty": "N"
+  },
+  {
+    "code": "N009",
+    "name": "Magister Pendidikan Geografi",
+    "faculty": "N"
+  },
+  {
+    "code": "N010",
+    "name": "Magister Pendidikan Dasar",
+    "faculty": "N"
+  },
+  {
+    "code": "N011",
+    "name": "Magister Pendidikan Ekonomi",
+    "faculty": "N"
+  },
+  {
+    "code": "N012",
+    "name": "Magister Ekonomi",
+    "faculty": "N"
+  },
+  {
+    "code": "N013",
+    "name": "Magister Pendidikan Seni",
+    "faculty": "N"
+  },
+  {
+    "code": "N014",
+    "name": "Magister Pendidikan Teknologi Kejuruan",
+    "faculty": "N"
+  },
+  {
+    "code": "N015",
+    "name": "Magister Pendidikan Khusus",
+    "faculty": "N"
+  },
+  {
+    "code": "N016",
+    "name": "Magister Pendidikan Umum dan Karakter",
+    "faculty": "N"
+  },
+  {
+    "code": "N017",
+    "name": "Magister Pendidikan Anak Usia Dini",
+    "faculty": "N"
+  },
+  {
+    "code": "N018",
+    "name": "Magister Pengembangan Kurikulum",
+    "faculty": "N"
+  },
+  {
+    "code": "N019",
+    "name": "Magister Administrasi Pendidikan",
+    "faculty": "N"
+  },
+  {
+    "code": "N020",
+    "name": "Magister Pendidikan Bahasa dan Budaya Sunda",
+    "faculty": "N"
+  },
+  {
+    "code": "N021",
+    "name": "Magister Pendidikan Olahraga",
+    "faculty": "N"
+  },
+  {
+    "code": "N022",
+    "name": "Magister Pendidikan Ilmu Pengetahuan Alam",
+    "faculty": "N"
+  },
+  {
+    "code": "N023",
+    "name": "Magister Psikologi Pendidikan",
+    "faculty": "N"
+  },
+  {
+    "code": "N024",
+    "name": "Magister Pendidikan Bahasa Jepang",
+    "faculty": "N"
+  },
+  {
+    "code": "N025",
+    "name": "Magister Pendidikan Bahasa Indonesia",
+    "faculty": "N"
+  },
+  {
+    "code": "N026",
+    "name": "Magister Pendidikan Bahasa Arab",
+    "faculty": "N"
+  },
+  {
+    "code": "N027",
+    "name": "Doktor Pendidikan Geografi",
+    "faculty": "N"
+  },
+  {
+    "code": "N028",
+    "name": "Doktor Pendidikan Sejarah",
+    "faculty": "N"
+  },
+  {
+    "code": "N029",
+    "name": "Doktor Pendidikan Seni",
+    "faculty": "N"
+  },
+  {
+    "code": "N030",
+    "name": "Doktor Pendidikan Khusus",
+    "faculty": "N"
+  },
+  {
+    "code": "N031",
+    "name": "Doktor Pendidikan Ekonomi",
+    "faculty": "N"
+  },
+  {
+    "code": "N032",
+    "name": "Doktor Pendidikan Dasar",
+    "faculty": "N"
+  },
+  {
+    "code": "N033",
+    "name": "Doktor Manajemen",
+    "faculty": "N"
+  },
+  {
+    "code": "N034",
+    "name": "Doktor Linguistik",
+    "faculty": "N"
+  },
+  {
+    "code": "N035",
+    "name": "Doktor Pendidikan Umum dan Karakter",
+    "faculty": "N"
+  },
+  {
+    "code": "N036",
+    "name": "Doktor Pendidikan Ilmu Pengetahuan Alam",
+    "faculty": "N"
+  },
+  {
+    "code": "N037",
+    "name": "Doktor Pendidikan Ilmu Pengetahuan Sosial",
+    "faculty": "N"
+  },
+  {
+    "code": "N038",
+    "name": "Doktor Administrasi Pendidikan",
+    "faculty": "N"
+  },
+  {
+    "code": "N039",
+    "name": "Doktor Pendidikan Teknik dan Kejuruan",
+    "faculty": "N"
+  },
+  {
+    "code": "N040",
+    "name": "Doktor Pendidikan Olahraga",
+    "faculty": "N"
+  },
+  {
+    "code": "N041",
+    "name": "Doktor Pendidikan Bahasa Indonesia",
+    "faculty": "N"
+  },
+  {
+    "code": "N042",
+    "name": "Doktor Pengembangan Kurikulum",
+    "faculty": "N"
+  }
+]
