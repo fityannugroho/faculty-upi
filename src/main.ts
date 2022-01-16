@@ -9,7 +9,7 @@ async function bootstrap() {
   const docsConfig = new DocumentBuilder()
     .setTitle('Faculty UPI API')
     .setDescription('The documentation of Faculty UPI API')
-    .setVersion('1.0.0')
+    .setVersion('1.0.1')
     .build();
 
   const document = SwaggerModule.createDocument(app, docsConfig);
