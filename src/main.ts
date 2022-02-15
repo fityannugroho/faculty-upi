@@ -16,8 +16,8 @@ async function bootstrap() {
   SwaggerModule.setup('', app, document);
 
   // Configure app host and port.
-  const host = process.env.HOST || 'localhost';
-  const port = process.env.PORT || 3000;
+  const host = process.env.HOST;
+  const port = process.env.PORT;
 
   await app.listen(port, host);
   console.log(`App run successfully at ${await app.getUrl()}.`);
