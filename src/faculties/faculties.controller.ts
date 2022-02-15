@@ -5,10 +5,12 @@ import {
   HttpStatus,
   Param,
 } from '@nestjs/common';
+import { ApiTags } from '@nestjs/swagger';
 import { StudiesService } from 'src/studies/studies.service';
 import { FacultiesService } from './faculties.service';
 import { Faculty } from './schemas/faculty.schema';
 
+@ApiTags('Faculties')
 @Controller('faculties')
 export class FacultiesController {
   constructor(
