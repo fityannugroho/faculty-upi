@@ -280,13 +280,31 @@ Example :
 
 ## Environment Settings
 
-- Duplicate `template.env` file and rename it to `.env`.
+**1. Create `.env` file**
 
-- Set `APP_PORT` with port number you want to use (the default is **3000**).
+You can easily duplicate the `.env.example` file and rename it to `.env`.
 
-- Set `MONGODB_CONNECT_URI` with connection string of your cluster. It looks like `mongodb+srv://USERNAME:PASSWORD@CLUSTER_URI/DB_NAME?retryWrites=true&w=majority`. See [MongoDB docs](https://docs.atlas.mongodb.com/tutorial/connect-to-your-cluster) for details.
+**2. Configure `HOST` and `PORT`**
 
-- Now you are ready to [run the app](https://github.com/fityannugroho/faculty-upi#running-the-app) on local.
+Open `.env` file, then :
+
+- Set `HOST` with the hostname of your app. The default is `localhost`.
+
+- Set `PORT` with port number you want to use. The default is `3000`.
+
+The default values of `HOST` and `PORT` is example values to used in **development** stage. You may have to change it later for **production** stage.
+
+**3. Configure database connection**
+
+Set `MONGODB_CONNECT_URI` with connection string of your cluster. See [MongoDB docs](https://docs.atlas.mongodb.com/tutorial/connect-to-your-cluster) for details. The connection string looks like this :
+
+```bash
+mongodb+srv://USERNAME:PASSWORD@CLUSTER_URI/DB_NAME?retryWrites=true&w=majority
+```
+
+**4. App is ready**
+
+Now you are ready to [run the app](https://github.com/fityannugroho/faculty-upi#running-the-app) on local.
 
 ## Running The App
 
@@ -296,6 +314,6 @@ For run the app in development environment, use this command :
 $ npm run start
 ```
 
-> See [nestjs.README.md](./nestjs.README.md#running-the-app) file for details.
+See [nestjs.README.md](./nestjs.README.md#running-the-app) file for details.
 
-Finally, you can access the endpoint from http://localhost:3000 by default, or depends on `APP_PORT` settings at `.env` file.
+Finally, you can access the endpoint from http://localhost:3000 by default, or depends on `PORT` settings at `.env` file.
