@@ -1,10 +1,15 @@
 {
   "name": "faculty-upi",
   "version": "1.0.3",
-  "description": "",
-  "author": "",
-  "private": true,
-  "license": "UNLICENSED",
+  "description": "API that provides general information of faculties, regional campuses, and study programs at Universitas Pendidikan Indonesia ",
+  "author": "Fityan",
+  "private": false,
+  "homepage": "https://faculty-upi.herokuapp.com",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/fityannugroho/faculty-upi"
+  },
+  "license": "MIT",
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "nest build",
