@@ -3,7 +3,7 @@ import { IsAlpha, IsNotEmpty, IsString, Length } from 'class-validator';
 export class FacultyCodeParam {
   @IsNotEmpty()
   @IsAlpha()
-  @Length(1, 2)
+  @Length(1, 1)
   code: string;
 }
 
@@ -21,5 +21,6 @@ export class GetFacultiesByNameParams {
 export class GetFacultiesByAbbrParams {
   @IsNotEmpty()
   @IsString()
+  @Length(3)
   abbr: string;
 }
