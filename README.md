@@ -124,7 +124,7 @@ GET /studies/name/{studyName}
 - The response will be an **empty array** `[]` if there are **no study program matched** with `studyName`.
 - Usage example : https://faculty-upi.herokuapp.com/studies/name/pendidikan
 
-> Go to [**API documentation**](https://faculty-upi.herokuapp.com) for more details about the endpoint, and also **try to use** it in the 'playground'.
+> Go to [**API documentation**](https://faculty-upi.herokuapp.com) for more details about the endpoint. You can also **try to use** it by clicking the _"Try it out"_ button inside each endpoint.
 
 ## Environment Settings
 
