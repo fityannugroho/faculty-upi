@@ -1,55 +1,62 @@
+import { Controller, Get, NotFoundException, Param } from '@nestjs/common';
 import {
-  Controller,
-  Get,
-  HttpException,
-  HttpStatus,
-  Param,
-} from '@nestjs/common';
-import { ApiTags } from '@nestjs/swagger';
+  ApiBadRequestResponse,
+  ApiNotFoundResponse,
+  ApiOkResponse,
+  ApiOperation,
+  ApiParam,
+  ApiTags,
+} from '@nestjs/swagger';
 import { Study } from './schemas/study.schema';
 import { StudiesService } from './studies.service';
+import { GetByCodeParams, GetByNameParams } from './study.dto';
 
 @ApiTags('Studies')
 @Controller('studies')
 export class StudiesController {
   constructor(private studiesService: StudiesService) {}
 
-  /**
-   * Get all study programs.
-   * @returns All study programs.
-   */
+  @ApiOperation({ description: 'Get all study programs.' })
+  @ApiOkResponse({ description: 'Returns an array of study program.' })
   @Get()
   async getAll(): Promise<Study[]> {
     return this.studiesService.findAll();
   }
 
-  /**
-   * Get a study program by its code.
-   * @param code The study program code.
-   * @returns The suitable study program.
-   */
-  @Get(':studyCode')
-  async getByCode(@Param('studyCode') code: string) {
-    const suitableStudy = await this.studiesService.findByCode(code);
+  @ApiOperation({ description: 'Get a study program.' })
+  @ApiOkResponse({ description: 'Returns a study program.' })
+  @ApiBadRequestResponse({ description: 'When the code is invalid.' })
+  @ApiNotFoundResponse({ description: 'When no study program match the code.' })
+  @ApiParam({
+    name: 'code',
+    type: 'string',
+    description: 'The study program code.',
+    example: 'G505',
+  })
+  @Get(':code')
+  async getByCode(@Param() params: GetByCodeParams) {
+    const { code } = params;
+    const study = await this.studiesService.findByCode(code);
 
     // Result validation.
-    if (suitableStudy === null) {
-      throw new HttpException(
-        `No study program found with the same code as '${code}'`,
-        HttpStatus.NOT_FOUND,
-      );
-    }
+    if (study === null)
+      throw new NotFoundException(`No study program found with code '${code}'`);
 
-    return suitableStudy;
+    return study;
   }
 
-  /**
-   * Get all study programs by its name.
-   * @param studyName The name of study program.
-   * @returns All study programs with matching names.
-   */
-  @Get('name/:studyName')
-  async getByName(@Param('studyName') studyName: string): Promise<Study[]> {
-    return this.studiesService.findByName(studyName);
+  @ApiOperation({ description: 'Find study programs by its name.' })
+  @ApiOkResponse({ description: 'Returns an array of study program.' })
+  @ApiBadRequestResponse({ description: 'When the name is invalid.' })
+  @ApiParam({
+    name: 'name',
+    type: 'string',
+    description: 'The study program name.',
+    example: 'pendidikan',
+  })
+  @Get('name/:name')
+  async getByName(@Param() params: GetByNameParams): Promise<Study[]> {
+    const { name } = params;
+    return this.studiesService.findByName(name);
   }
 }
