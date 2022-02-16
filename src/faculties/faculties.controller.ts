@@ -109,7 +109,7 @@ export class FacultiesController {
     name: 'abbr',
     type: 'string',
     description: 'The faculty abbreviation.',
-    example: 'fpmipa',
+    example: 'kamda',
   })
   @Get('abbr/:abbr')
   async getFacultiesByAbbr(
