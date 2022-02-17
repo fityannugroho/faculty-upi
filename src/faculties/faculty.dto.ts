@@ -7,18 +7,18 @@ export class FacultyCodeParam {
   code: string;
 }
 
-export class GetFacultyByCodeParams extends FacultyCodeParam {}
+export class FindByCodeParams extends FacultyCodeParam {}
 
-export class GetStudiesByFacultyParams extends FacultyCodeParam {}
+export class FindStudiesParams extends FacultyCodeParam {}
 
-export class GetFacultiesByNameParams {
+export class FindByNameParams {
   @IsNotEmpty()
   @IsString()
   @Length(3)
   name: string;
 }
 
-export class GetFacultiesByAbbrParams {
+export class FindByAbbrParams {
   @IsNotEmpty()
   @IsString()
   @Length(3)

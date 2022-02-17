@@ -11,10 +11,10 @@ import { Study } from 'src/studies/schemas/study.schema';
 import { StudiesService } from 'src/studies/studies.service';
 import { FacultiesService } from './faculties.service';
 import {
-  GetFacultiesByAbbrParams,
-  GetFacultiesByNameParams,
-  GetFacultyByCodeParams,
-  GetStudiesByFacultyParams,
+  FindByCodeParams,
+  FindByAbbrParams,
+  FindByNameParams,
+  FindStudiesParams,
 } from './faculty.dto';
 import { Faculty } from './schemas/faculty.schema';
 
@@ -29,7 +29,7 @@ export class FacultiesController {
   @ApiOperation({ description: 'Get all faculties.' })
   @ApiOkResponse({ description: 'Returns an array of faculties.' })
   @Get()
-  async getFaculties(): Promise<Faculty[]> {
+  async findAll(): Promise<Faculty[]> {
     return this.facultiesService.findAll();
   }
 
@@ -44,17 +44,13 @@ export class FacultiesController {
     example: 'A',
   })
   @Get(':code')
-  async getFacultyByCode(
-    @Param() params: GetFacultyByCodeParams,
-  ): Promise<Faculty> {
-    const { code: facultyCode } = params;
-    const faculty = await this.facultiesService.findByCode(facultyCode);
+  async findByCode(@Param() params: FindByCodeParams): Promise<Faculty> {
+    const { code } = params;
+    const faculty = await this.facultiesService.findByCode(code);
 
     // Result validation.
     if (faculty === null)
-      throw new NotFoundException(
-        `No faculty found with code '${facultyCode}'`,
-      );
+      throw new NotFoundException(`No faculty found with code '${code}'`);
 
     return faculty;
   }
@@ -70,19 +66,15 @@ export class FacultiesController {
     example: 'A',
   })
   @Get(':code/studies')
-  async getStudiesByFaculty(
-    @Param() params: GetStudiesByFacultyParams,
-  ): Promise<Study[]> {
-    const { code: facultyCode } = params;
+  async findStudies(@Param() params: FindStudiesParams): Promise<Study[]> {
+    const { code } = params;
 
     // Validate the faculty code.
-    if ((await this.facultiesService.findByCode(facultyCode)) === null)
-      throw new NotFoundException(
-        `No faculty found with code '${facultyCode}'`,
-      );
+    if ((await this.facultiesService.findByCode(code)) === null)
+      throw new NotFoundException(`No faculty found with code '${code}'`);
 
     // Get all study programs with the validated faculty code.
-    return this.studiesService.findByFaculty(facultyCode);
+    return this.studiesService.findByFaculty(code);
   }
 
   @ApiOperation({ description: 'Find faculties by its name.' })
@@ -95,9 +87,7 @@ export class FacultiesController {
     example: 'kampus',
   })
   @Get('name/:name')
-  async getFacultiesByName(
-    @Param() params: GetFacultiesByNameParams,
-  ): Promise<Faculty[]> {
+  async findByName(@Param() params: FindByNameParams): Promise<Faculty[]> {
     const { name } = params;
     return this.facultiesService.findByName(name);
   }
@@ -112,9 +102,7 @@ export class FacultiesController {
     example: 'kamda',
   })
   @Get('abbr/:abbr')
-  async getFacultiesByAbbr(
-    @Param() params: GetFacultiesByAbbrParams,
-  ): Promise<Faculty[]> {
+  async FindByAbbr(@Param() params: FindByAbbrParams): Promise<Faculty[]> {
     const { abbr } = params;
     return this.facultiesService.findByAbbr(abbr);
   }
