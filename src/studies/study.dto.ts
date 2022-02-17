@@ -7,9 +7,9 @@ export class StudyCodeParam {
   code: string;
 }
 
-export class GetByCodeParams extends StudyCodeParam {}
+export class FindByCodeParams extends StudyCodeParam {}
 
-export class GetByNameParams {
+export class FindByNameParams {
   @IsNotEmpty()
   @IsString()
   @Length(3)
