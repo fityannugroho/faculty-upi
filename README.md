@@ -4,11 +4,11 @@
 
 ## Table of Contents
 
-1. [Description](https://github.com/fityannugroho/faculty-upi#description)
-2. [Framework & Database](https://github.com/fityannugroho/faculty-upi#framework--database)
-3. [Endpoint API](https://github.com/fityannugroho/faculty-upi#endpoint-api)
-4. [Environment Settings](https://github.com/fityannugroho/faculty-upi#environment-settings)
-5. [Running the App](https://github.com/fityannugroho/faculty-upi#running-the-app)
+1. [Description](#description)
+2. [Framework & Database](#framework--database)
+3. [API Endpoint](#api-endpoint)
+4. [Environment Settings](#environment-settings)
+5. [Running the App](#running-the-app)
 
 ---
 
@@ -25,258 +25,106 @@ This project use [NestJS](https://nestjs.com) framework that writes in Typescrip
 `faculties` collection stores all of faculty `document` that each document has fields:
 
 - `_id`, The auto generated document id by MongoDB.
-- `code`, The code of faculty (primary key).
+- `code`, The code of faculty (_primary key_).
 - `name`, The name of faculty.
 - `abbr`, The abbreviation of faculty's name.
 
 `studies` collection stores all of study program `document` that each document has fields:
 
 - `_id`, The auto generated document id by MongoDB.
-- `code`, The code of study program (primary key).
+- `code`, The code of study program (_primary key_).
 - `name`, The name of study program.
-- `faculty`, The faculty's code of study program (foreign key).
+- `faculty`, The faculty's code of study program (_foreign key_).
 
-## Endpoint API
+## API Endpoint
 
-### **GET All Faculties**
+### Get All Faculties
 
 ```
 GET /faculties
 ```
 
-Example :
+- Use this endpoint to get all of faculty.
+- It will return an array of faculty.
+- Usage example : https://faculty-upi.herokuapp.com/faculties
 
-```json
-// Request: http://localhost:3000/faculties
-// Response: (200 OK)
-[
-  {
-    "_id": "61a4deb405a8fb92d5c25dc4",
-    "code": "A",
-    "name": "Fakultas Ilmu Pendidikan",
-    "abbr": "FIP",
-  },
-  {
-    "_id": "61a4deb405a8fb92d5c25dc5",
-    "code": "B",
-    "name": "Fakultas Pendidikan Ilmu Pengetahuan Sosial",
-    "abbr": "FPIPS"
-  },
-  ...
-]
-```
+### Get Specific Faculty
 
-### **GET Faculty by Code**
-
-```
+```bash
 GET /faculties/{facultyCode}
 ```
 
-Example:
+- Use this endpoint to get a specific faculty by its code.
+- The `facultyCode` must be **an alphabet character**. If not, you will get `400 Bad Request` response.
+- The response will be `404 Not Found` if there are no faculty with code that equals to `facultyCode`.
+- Usage example : https://faculty-upi.herokuapp.com/faculties/a
 
-```json
-// 1. IF FACULTY CODE IS KNOWN
-// Request: http://localhost:3000/faculties/a
-// Response: (200 OK)
-{
-  "_id": "61a4deb405a8fb92d5c25dc4",
-  "code": "A",
-  "name": "Fakultas Ilmu Pendidikan",
-  "abbr": "FIP",
-}
-
-// 2. IF FACULTY CODE IS UNKNOWN
-// Request: http://localhost:3000/faculties/unknown
-// Response: (404 NOT FOUND)
-{
-  "statusCode": 404,
-  "message": "No faculty found with the same code as 'unknown'"
-}
-```
-
-### **GET Faculties by Name**
-
-```
-GET /faculties/name/{facultyName}
-```
-
-Example:
-
-```json
-// Request: http://localhost:3000/faculties/name/kampus
-// Response: (200 OK)
-[
-  {
-    "_id": "61a4deb405a8fb92d5c25dca",
-    "code": "G",
-    "name": "Kampus UPI Cibiru",
-    "abbr": "Kamda Cibiru"
-  },
-  {
-    "_id": "61a4deb405a8fb92d5c25dcb",
-    "code": "H",
-    "name": "Kampus UPI Sumedang",
-    "abbr": "Kamda Sumedang"
-  },
-  ...
-]
-```
-
-> Response will be an **empty array** `[]` if there are no faculty matched with `facultyName`.
-
-### **GET Faculties by Abbreviation**
-
-```
-GET /faculties/abbr/{facultyAbbr}
-```
-
-Example:
-
-```json
-// Request: http://localhost:3000/faculties/abbr/fp
-// Response: (200 OK)
-[
-  {
-    "_id": "61a4deb405a8fb92d5c25dc5",
-    "code": "B",
-    "name": "Fakultas Pendidikan Ilmu Pengetahuan Sosial",
-    "abbr": "FPIPS"
-  },
-  {
-    "_id": "61a4deb405a8fb92d5c25dc6",
-    "code": "C",
-    "name": "Fakultas Pendidikan Bahasa dan Sastra",
-    "abbr": "FPBS"
-  },
-  ...
-]
-```
-
-> Response will be an **empty array** `[]` if there are no faculty matched with `facultyAbbr`.
-
-### **GET All Study Programs**
-
-```
-GET /studies
-```
-
-Example :
-
-```json
-// Request: http://localhost:3000/studies
-// Response: (200 OK)
-[
-  {
-    "_id": "61a4decc05a8fb92d5c25dd4",
-    "code": "A015",
-    "name": "Administrasi Pendidikan",
-    "faculty": "A"
-  },
-  ...,
-  {
-    "_id": "61a4decc05a8fb92d5c25ddd",
-    "code": "B015",
-    "name": "Pendidikan Kewarganegaraan",
-    "faculty": "B"
-  },
-  ...
-]
-```
-
-### **GET Study Program by Code**
-
-```
-GET /studies/{studyCode}
-```
-
-Example :
-
-```json
-// 1. IF STUDY CODE IS KNOWN
-// Request: http://localhost:3000/studies/g505
-// Response: (200 OK)
-{
-  "_id": "61a4decc05a8fb92d5c25e15",
-  "code": "G505",
-  "name": "Rekayasa Perangkat Lunak",
-  "faculty": "G"
-}
-
-// 2. IF STUDY CODE IS UNKNOWN
-// Request: http://localhost:3000/studies/unknown
-// Response: (404 NOT FOUND)
-{
-  "statusCode": 404,
-  "message": "No study program found with the same code as 'unknown'"
-}
-```
-
-### **GET Study Program by Name**
-
-```
-GET /studies/name/{studyName}
-```
-
-Example :
-
-```json
-// Request: http://localhost:3000/studies/name/ilmu
-// Response: (200 OK)
-[
-  {
-    "_id": "61a4decc05a8fb92d5c25de0",
-    "code": "B085",
-    "name": "Ilmu Pendidikan Agama Islam",
-    "faculty": "B"
-  },
-  {
-    "_id": "61a4decc05a8fb92d5c25de1",
-    "code": "B095",
-    "name": "Pendidikan Ilmu Pengetahuan Sosial",
-    "faculty": "B"
-  },
-  ...
-]
-```
-
-> Response will be an **empty array** `[]` if there are no study program matched with `studyName`.
-
-### **GET All Study Programs by Faculty Code**
+### Get Study Programs in Faculty
 
 ```
 GET /faculties/{facultyCode}/studies
 ```
 
-Example :
+- Use this endpoint to get all of study programs in a specific faculty.
+- The `facultyCode` must be **an alphabet character**. If not, you will get `400 Bad Request` response.
+- The response will be `404 Not Found` if there are no faculty with code that equals to `facultyCode`.
+- Usage example : https://faculty-upi.herokuapp.com/faculties/a/studies
 
-```json
-// 1. IF FACULTY CODE IS KNOWN
-// Request: http://localhost:3000/faculties/a/studies
-// Response: (200 OK)
-[
-  {
-    "_id": "61a4decc05a8fb92d5c25dd4",
-    "code": "A015",
-    "name": "Administrasi Pendidikan",
-    "faculty": "A"
-  },
-  {
-    "_id": "61a4decc05a8fb92d5c25dd5",
-    "code": "A025",
-    "name": "Bimbingan dan Konseling",
-    "faculty": "A"
-  },
-  ...
-]
+### Find Faculties by Name
 
-// 2. IF FACULTY CODE IS KNOWN
-// Request: http://localhost:3000/faculties/unknown/studies
-// Response: (404 NOT FOUND)
-{
-  "statusCode": 404,
-  "message": "No faculty found with the same code as 'unknown'"
-}
 ```
+GET /faculties/name/{facultyName}
+```
+
+- Use this endpoint to find faculties by its name.
+- The `facultyName` must be **at least 3 characters**. If not, you will get `400 Bad Request` response.
+- The response will be an **empty array** `[]` if there are **no faculty matched** with `facultyName`.
+- Usage example : https://faculty-upi.herokuapp.com/faculties/name/kampus
+
+### Find Faculties by Abbreviation
+
+```
+GET /faculties/abbr/{facultyAbbr}
+```
+
+- Use this endpoint to find faculties by its abbreviation.
+- The `facultyAbbr` must be **at least 3 characters**. If not, you will get `400 Bad Request` response.
+- The response will be an **empty array** `[]` if there are **no faculty matched** with `facultyAbbr`.
+- Usage example : https://faculty-upi.herokuapp.com/faculties/abbr/kamda
+
+### Get All Study Programs
+
+```
+GET /studies
+```
+
+- Use this endpoint to get all of study program.
+- It will return an array of study program.
+- Usage example : https://faculty-upi.herokuapp.com/studies
+
+### Get Spesific Study Program
+
+```
+GET /studies/{studyCode}
+```
+
+- Use this endpoint to get a specific study program by its code.
+- The `studyCode` must be **4 alphanumeric characters**. If not, you will get `400 Bad Request` response.
+- The response will be `404 Not Found` if there are no study program with code that equals to `studyCode`.
+- Usage example : https://faculty-upi.herokuapp.com/studies/G505
+
+### Find Study Program by Name
+
+```
+GET /studies/name/{studyName}
+```
+
+- Use this endpoint to find study programs by its name.
+- The `studyName` must be **at least 3 characters**. If not, you will get `400 Bad Request` response.
+- The response will be an **empty array** `[]` if there are **no study program matched** with `studyName`.
+- Usage example : https://faculty-upi.herokuapp.com/studies/name/pendidikan
+
+> Go to [**API documentation**](https://faculty-upi.herokuapp.com) for more details about the endpoint. You can also **try to use** it by clicking the _"Try it out"_ button inside each endpoint.
 
 ## Environment Settings
 

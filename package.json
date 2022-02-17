@@ -1,6 +1,6 @@
 {
   "name": "faculty-upi",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "API that provides general information of faculties, regional campuses, and study programs at Universitas Pendidikan Indonesia ",
   "author": "Fityan",
   "private": false,
@@ -32,6 +32,8 @@
     "@nestjs/mongoose": "^9.0.1",
     "@nestjs/platform-express": "^8.0.0",
     "@nestjs/swagger": "^5.1.5",
+    "class-transformer": "^0.4.0",
+    "class-validator": "^0.13.2",
     "mongoose": "^6.0.13",
     "reflect-metadata": "^0.1.13",
     "rimraf": "^3.0.2",
