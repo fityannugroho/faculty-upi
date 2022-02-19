@@ -5,7 +5,7 @@ import {
   RequestMethod,
 } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { FacultiesMiddleware } from 'src/middleware/faculties.middleware';
+import { FacultyMiddleware } from 'src/middleware/faculty.middleware';
 import { StudiesModule } from 'src/studies/studies.module';
 import { FacultyController } from './faculty.controller';
 import { FacultyService } from './faculty.service';
@@ -22,7 +22,7 @@ import { Faculty, FacultySchema } from './schemas/faculty.schema';
 export class FacultyModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     // Faculty code validation
-    consumer.apply(FacultiesMiddleware).forRoutes({
+    consumer.apply(FacultyMiddleware).forRoutes({
       path: 'faculties/:facultyCode',
       method: RequestMethod.GET,
     });
