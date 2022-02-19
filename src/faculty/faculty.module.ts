@@ -9,7 +9,7 @@ import { FacultyMiddleware } from 'src/middleware/faculty.middleware';
 import { StudiesModule } from 'src/studies/studies.module';
 import { FacultyController } from './faculty.controller';
 import { FacultyService } from './faculty.service';
-import { Faculty, FacultySchema } from './schemas/faculty.schema';
+import { Faculty, FacultySchema } from './faculty.schema';
 
 @Module({
   imports: [

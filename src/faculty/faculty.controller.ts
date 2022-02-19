@@ -16,7 +16,7 @@ import {
   FindByNameParams,
   FindStudiesParams,
 } from './faculty.dto';
-import { Faculty } from './schemas/faculty.schema';
+import { Faculty } from './faculty.schema';
 
 @ApiTags('Faculty')
 @Controller('faculties')
