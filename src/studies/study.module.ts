@@ -12,4 +12,4 @@ import { Study, StudySchema } from './schemas/study.schema';
   controllers: [StudyController],
   exports: [StudyService],
 })
-export class StudiesModule {}
+export class StudyModule {}

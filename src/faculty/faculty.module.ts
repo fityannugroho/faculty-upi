@@ -6,7 +6,7 @@ import {
 } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { FacultyMiddleware } from 'src/common/middlewares/faculty.middleware';
-import { StudiesModule } from 'src/studies/studies.module';
+import { StudyModule } from 'src/studies/study.module';
 import { FacultyController } from './faculty.controller';
 import { FacultyService } from './faculty.service';
 import { Faculty, FacultySchema } from './faculty.schema';
@@ -14,7 +14,7 @@ import { Faculty, FacultySchema } from './faculty.schema';
 @Module({
   imports: [
     MongooseModule.forFeature([{ name: Faculty.name, schema: FacultySchema }]),
-    StudiesModule,
+    StudyModule,
   ],
   controllers: [FacultyController],
   providers: [FacultyService],
