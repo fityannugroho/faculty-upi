@@ -18,9 +18,9 @@ import {
 } from './faculty.dto';
 import { Faculty } from './schemas/faculty.schema';
 
-@ApiTags('Faculties')
+@ApiTags('Faculty')
 @Controller('faculties')
-export class FacultiesController {
+export class FacultyController {
   constructor(
     private readonly facultiesService: FacultiesService,
     private readonly studiesService: StudiesService,
