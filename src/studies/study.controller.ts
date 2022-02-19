@@ -7,7 +7,7 @@ import {
   ApiParam,
   ApiTags,
 } from '@nestjs/swagger';
-import { Study } from './schemas/study.schema';
+import { Study } from './study.schema';
 import { StudyService } from './study.service';
 import { FindByCodeParams, FindByNameParams } from './study.dto';
 

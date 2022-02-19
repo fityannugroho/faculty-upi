@@ -7,7 +7,7 @@ import {
   ApiParam,
   ApiTags,
 } from '@nestjs/swagger';
-import { Study } from 'src/studies/schemas/study.schema';
+import { Study } from 'src/studies/study.schema';
 import { StudyService } from 'src/studies/study.service';
 import { FacultyService } from './faculty.service';
 import {
