@@ -11,9 +11,9 @@ import { Study } from './schemas/study.schema';
 import { StudiesService } from './studies.service';
 import { FindByCodeParams, FindByNameParams } from './study.dto';
 
-@ApiTags('Studies')
+@ApiTags('Study')
 @Controller('studies')
-export class StudiesController {
+export class StudyController {
   constructor(private studiesService: StudiesService) {}
 
   @ApiOperation({ description: 'Get all study programs.' })
