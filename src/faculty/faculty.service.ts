@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Faculty, FacultyDocument } from './schemas/faculty.schema';
+import { Faculty, FacultyDocument } from './faculty.schema';
 
 @Injectable()
-export class FacultiesService {
+export class FacultyService {
   constructor(
     @InjectModel(Faculty.name) private facultyModel: Model<FacultyDocument>,
   ) {}

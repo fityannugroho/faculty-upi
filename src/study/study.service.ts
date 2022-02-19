@@ -1,10 +1,10 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { Study, StudyDocument } from './schemas/study.schema';
+import { Study, StudyDocument } from './study.schema';
 
 @Injectable()
-export class StudiesService {
+export class StudyService {
   constructor(
     @InjectModel(Study.name)
     private studyModel: Model<StudyDocument>,

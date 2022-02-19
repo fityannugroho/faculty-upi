@@ -1,8 +1,8 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
-import { FacultiesModule } from 'src/faculties/faculties.module';
-import { StudiesModule } from 'src/studies/studies.module';
+import { FacultyModule } from 'src/faculty/faculty.module';
+import { StudyModule } from 'src/study/study.module';
 
 @Module({
   imports: [
@@ -13,8 +13,8 @@ import { StudiesModule } from 'src/studies/studies.module';
         uri: process.env.MONGODB_CONNECT_URI,
       }),
     }),
-    FacultiesModule,
-    StudiesModule,
+    FacultyModule,
+    StudyModule,
   ],
   controllers: [],
   providers: [],
