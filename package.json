@@ -1,6 +1,6 @@
 {
   "name": "faculty-upi",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "API that provides general information of faculties, regional campuses, and study programs at Universitas Pendidikan Indonesia ",
   "author": "Fityan",
   "private": false,
