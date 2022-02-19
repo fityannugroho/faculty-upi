@@ -5,7 +5,7 @@ import {
   RequestMethod,
 } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
-import { FacultyMiddleware } from 'src/middleware/faculty.middleware';
+import { FacultyMiddleware } from 'src/common/middlewares/faculty.middleware';
 import { StudiesModule } from 'src/studies/studies.module';
 import { FacultyController } from './faculty.controller';
 import { FacultyService } from './faculty.service';
