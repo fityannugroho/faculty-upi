@@ -19,7 +19,7 @@ import { Faculty, FacultySchema } from './schemas/faculty.schema';
   controllers: [FacultyController],
   providers: [FacultyService],
 })
-export class FacultiesModule implements NestModule {
+export class FacultyModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
     // Faculty code validation
     consumer.apply(FacultiesMiddleware).forRoutes({

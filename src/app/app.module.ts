@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
-import { FacultiesModule } from 'src/faculties/faculties.module';
+import { FacultyModule } from 'src/faculties/faculty.module';
 import { StudiesModule } from 'src/studies/studies.module';
 
 @Module({
@@ -13,7 +13,7 @@ import { StudiesModule } from 'src/studies/studies.module';
         uri: process.env.MONGODB_CONNECT_URI,
       }),
     }),
-    FacultiesModule,
+    FacultyModule,
     StudiesModule,
   ],
   controllers: [],
