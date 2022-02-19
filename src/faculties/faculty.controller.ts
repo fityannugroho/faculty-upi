@@ -9,7 +9,7 @@ import {
 } from '@nestjs/swagger';
 import { Study } from 'src/studies/schemas/study.schema';
 import { StudiesService } from 'src/studies/studies.service';
-import { FacultiesService } from './faculties.service';
+import { FacultyService } from './faculty.service';
 import {
   FindByCodeParams,
   FindByAbbrParams,
@@ -22,7 +22,7 @@ import { Faculty } from './schemas/faculty.schema';
 @Controller('faculties')
 export class FacultyController {
   constructor(
-    private readonly facultiesService: FacultiesService,
+    private readonly facultyService: FacultyService,
     private readonly studiesService: StudiesService,
   ) {}
 
@@ -30,7 +30,7 @@ export class FacultyController {
   @ApiOkResponse({ description: 'Returns an array of faculties.' })
   @Get()
   async findAll(): Promise<Faculty[]> {
-    return this.facultiesService.findAll();
+    return this.facultyService.findAll();
   }
 
   @ApiOperation({ description: 'Get a faculty.' })
@@ -46,7 +46,7 @@ export class FacultyController {
   @Get(':code')
   async findByCode(@Param() params: FindByCodeParams): Promise<Faculty> {
     const { code } = params;
-    const faculty = await this.facultiesService.findByCode(code);
+    const faculty = await this.facultyService.findByCode(code);
 
     // Result validation.
     if (faculty === null)
@@ -70,7 +70,7 @@ export class FacultyController {
     const { code } = params;
 
     // Validate the faculty code.
-    if ((await this.facultiesService.findByCode(code)) === null)
+    if ((await this.facultyService.findByCode(code)) === null)
       throw new NotFoundException(`No faculty found with code '${code}'`);
 
     // Get all study programs with the validated faculty code.
@@ -89,7 +89,7 @@ export class FacultyController {
   @Get('name/:name')
   async findByName(@Param() params: FindByNameParams): Promise<Faculty[]> {
     const { name } = params;
-    return this.facultiesService.findByName(name);
+    return this.facultyService.findByName(name);
   }
 
   @ApiOperation({ description: 'Find faculties by its abbreviation.' })
@@ -104,6 +104,6 @@ export class FacultyController {
   @Get('abbr/:abbr')
   async FindByAbbr(@Param() params: FindByAbbrParams): Promise<Faculty[]> {
     const { abbr } = params;
-    return this.facultiesService.findByAbbr(abbr);
+    return this.facultyService.findByAbbr(abbr);
   }
 }

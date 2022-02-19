@@ -4,7 +4,7 @@ import { Model } from 'mongoose';
 import { Faculty, FacultyDocument } from './schemas/faculty.schema';
 
 @Injectable()
-export class FacultiesService {
+export class FacultyService {
   constructor(
     @InjectModel(Faculty.name) private facultyModel: Model<FacultyDocument>,
   ) {}

@@ -8,7 +8,7 @@ import { MongooseModule } from '@nestjs/mongoose';
 import { FacultiesMiddleware } from 'src/middleware/faculties.middleware';
 import { StudiesModule } from 'src/studies/studies.module';
 import { FacultyController } from './faculty.controller';
-import { FacultiesService } from './faculties.service';
+import { FacultyService } from './faculty.service';
 import { Faculty, FacultySchema } from './schemas/faculty.schema';
 
 @Module({
@@ -17,7 +17,7 @@ import { Faculty, FacultySchema } from './schemas/faculty.schema';
     StudiesModule,
   ],
   controllers: [FacultyController],
-  providers: [FacultiesService],
+  providers: [FacultyService],
 })
 export class FacultiesModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
