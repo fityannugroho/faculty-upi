@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
 import { MongooseModule } from '@nestjs/mongoose';
-import { FacultyModule } from 'src/faculties/faculty.module';
+import { FacultyModule } from 'src/faculty/faculty.module';
 import { StudiesModule } from 'src/studies/studies.module';
 
 @Module({
