@@ -6,7 +6,7 @@ import {
 } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { FacultyMiddleware } from 'src/common/middlewares/faculty.middleware';
-import { StudyModule } from 'src/studies/study.module';
+import { StudyModule } from 'src/study/study.module';
 import { FacultyController } from './faculty.controller';
 import { FacultyService } from './faculty.service';
 import { Faculty, FacultySchema } from './faculty.schema';

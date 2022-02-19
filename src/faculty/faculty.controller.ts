@@ -7,8 +7,8 @@ import {
   ApiParam,
   ApiTags,
 } from '@nestjs/swagger';
-import { Study } from 'src/studies/study.schema';
-import { StudyService } from 'src/studies/study.service';
+import { Study } from 'src/study/study.schema';
+import { StudyService } from 'src/study/study.service';
 import { FacultyService } from './faculty.service';
 import {
   FindByCodeParams,
