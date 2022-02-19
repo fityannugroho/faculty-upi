@@ -8,7 +8,7 @@ import {
   ApiTags,
 } from '@nestjs/swagger';
 import { Study } from 'src/studies/schemas/study.schema';
-import { StudiesService } from 'src/studies/studies.service';
+import { StudyService } from 'src/studies/study.service';
 import { FacultyService } from './faculty.service';
 import {
   FindByCodeParams,
@@ -23,7 +23,7 @@ import { Faculty } from './faculty.schema';
 export class FacultyController {
   constructor(
     private readonly facultyService: FacultyService,
-    private readonly studiesService: StudiesService,
+    private readonly studiesService: StudyService,
   ) {}
 
   @ApiOperation({ description: 'Get all faculties.' })

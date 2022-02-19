@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { StudiesService } from './studies.service';
+import { StudyService } from './study.service';
 import { StudyController } from './study.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Study, StudySchema } from './schemas/study.schema';
@@ -8,8 +8,8 @@ import { Study, StudySchema } from './schemas/study.schema';
   imports: [
     MongooseModule.forFeature([{ name: Study.name, schema: StudySchema }]),
   ],
-  providers: [StudiesService],
+  providers: [StudyService],
   controllers: [StudyController],
-  exports: [StudiesService],
+  exports: [StudyService],
 })
 export class StudiesModule {}

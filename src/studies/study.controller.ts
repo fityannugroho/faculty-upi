@@ -8,19 +8,19 @@ import {
   ApiTags,
 } from '@nestjs/swagger';
 import { Study } from './schemas/study.schema';
-import { StudiesService } from './studies.service';
+import { StudyService } from './study.service';
 import { FindByCodeParams, FindByNameParams } from './study.dto';
 
 @ApiTags('Study')
 @Controller('studies')
 export class StudyController {
-  constructor(private studiesService: StudiesService) {}
+  constructor(private studyService: StudyService) {}
 
   @ApiOperation({ description: 'Get all study programs.' })
   @ApiOkResponse({ description: 'Returns an array of study program.' })
   @Get()
   async findAll(): Promise<Study[]> {
-    return this.studiesService.findAll();
+    return this.studyService.findAll();
   }
 
   @ApiOperation({ description: 'Get a study program.' })
@@ -36,7 +36,7 @@ export class StudyController {
   @Get(':code')
   async findByCode(@Param() params: FindByCodeParams) {
     const { code } = params;
-    const study = await this.studiesService.findByCode(code);
+    const study = await this.studyService.findByCode(code);
 
     // Result validation.
     if (study === null)
@@ -57,6 +57,6 @@ export class StudyController {
   @Get('name/:name')
   async findByName(@Param() params: FindByNameParams): Promise<Study[]> {
     const { name } = params;
-    return this.studiesService.findByName(name);
+    return this.studyService.findByName(name);
   }
 }
